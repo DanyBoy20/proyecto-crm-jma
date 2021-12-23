@@ -1,0 +1,96 @@
+/* RESETEO DE ESTILOS EN NAVEGADORES */
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 16px;
+} 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+body{
+  background-color: green;
+}
+
+
+
+.division_secciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* flex-direction: column; */
+    background-color: purple;
+    /* background-size: cover; */
+    overflow: hidden;
+    /* position: relative; */
+    border: 1px solid white;
+  } 
+
+.contenedor_izq_der{
+    display: flex;
+  }
+
+  .caja__izq, .caja__der{
+    border: 2px dashed red;
+  }
+
+  .caja__izq{
+    width: 20rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    /* border-right: .1rem solid gray; */
+    overflow: hidden;
+    justify-content: space-around;
+  }
+
+  .caja__der{
+    flex: 1;
+    height: auto;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-around;
+    gap: 1rem;
+    padding: .5rem;
+  }
+
+  .caja__individual{
+    border: 1px solid yellow;
+
+  }
+
+  @media screen and (max-width: 688px) {
+
+    .contenedor_izq_der{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .caja__izq{
+      width: 100%;
+    }
+    
+
+  }
+
+  /* @media screen and (max-width: 768px) {
+
+    .caja__izq{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--colorGrisLighter);
+      } 
+
+  } */
+
+ 
